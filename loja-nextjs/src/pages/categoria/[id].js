@@ -3,10 +3,14 @@ import Layout from '../../Components/layout/Layout';
 import { getCategorias } from '../../Util/getCategorias';
 import { getProdutosCategoria } from '../../Util/getProdutosCategoria';
 import ProductList from '../../Components/Products-List/Product-List';
+import Head from 'next/head';
 
 const Categoria = ({ dataHeader, produtos }) => {
   return (
     <Layout dataHeader={dataHeader}>
+      <Head>
+        <title>{produtos[0].categoria.name}</title>
+      </Head>
       {produtos && produtos.length > 0 ? (
         <ProductList Title={produtos[0].categoria.name} produtos={produtos} />
       ) : null}

@@ -13,11 +13,14 @@
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "marked": "^2.0.0",
     "next": "10.0.7",
     "next-images": "^1.7.0",
     "react": "17.0.1",
     "react-bootstrap": "^1.5.0",
     "react-dom": "17.0.1",
+    "react-marked-markdown": "^1.4.6",
+    "remarkable": "^2.0.1",
     "styled-components": "^5.2.1"
   }
 }

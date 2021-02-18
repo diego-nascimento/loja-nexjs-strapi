@@ -4,10 +4,14 @@ import Banner from '../Components/Banner/Banner';
 import ProductList from '../Components/Products-List/Product-List';
 import { getCategorias } from '../Util/getCategorias';
 import { getNovidades } from '../Util/getNovidades';
+import Head from 'next/head';
 
 export default function Home({ data, novidades }) {
   return (
     <Layout dataHeader={data}>
+      <Head>
+        <title>Home</title>
+      </Head>
       <Painel />
       {novidades && novidades.length > 0 ? (
         <ProductList Title="Novidades" url={null} produtos={novidades} />

@@ -33,31 +33,6 @@ export const Lista = styled.ul`
   }
 `;
 
-export const Card = styled.li`
-  max-width: 700px;
-  width: 100%;
-  padding: 10px 20px;
-
-  .info {
-  }
-
-  p {
-    margin: 10px 0px;
-  }
-
-  span {
-    margin-left: 40px;
-  }
-
-  .image {
-    width: 100%;
-  }
-
-  img {
-    width: 100%;
-  }
-`;
-
 export const Button = styled.button`
   width: 200px;
   height: 50px;
