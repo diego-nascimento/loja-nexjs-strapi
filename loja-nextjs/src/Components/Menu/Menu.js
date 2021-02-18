@@ -12,7 +12,7 @@ const MenuItem = ({ Nome, Options, link }) => {
         onMouseLeave={() => setMenuState(false)}
       >
         {link && (
-          <Link href={link}>
+          <Link href={'http://localhost:3000/' + link}>
             <span>{Nome}</span>
           </Link>
         )}

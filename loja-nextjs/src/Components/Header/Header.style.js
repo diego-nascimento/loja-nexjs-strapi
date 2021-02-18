@@ -63,7 +63,6 @@ export const Navegacao = styled.nav`
 
 export const BotaoHambOpen = styled.div`
   display: none;
-
   flex-direction: column;
   z-index: 99;
   width: 40px;
@@ -75,7 +74,7 @@ export const BotaoHambOpen = styled.div`
   @media (max-width: 880px) {
     display: flex;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     top: 10px;
     left: 20px;
     margin-top: 20px;
@@ -110,7 +109,7 @@ export const BotaoHambClosed = styled.div`
   @media (max-width: 880px) {
     display: flex;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     top: 10px;
     left: 20px;
   }

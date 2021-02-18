@@ -1,26 +1,20 @@
 import React from 'react';
-import { Lista, Card, Wrapper, Button } from './Product-List.style';
+import { Lista, Card, Wrapper } from './Product-List.style';
 
-const Images = [
-  { url: '/painel.jpg', alt: 'Imagem Promocional' },
-  { url: '/painel.jpg', alt: 'Imagem Promocional' },
-  { url: '/painel.jpg', alt: 'Imagem Promocional' },
-  { url: '/painel.jpg', alt: 'Imagem Promocional' },
-  { url: '/painel.jpg', alt: 'Imagem Promocional' },
-  { url: '/painel.jpg', alt: 'Imagem Promocional' },
-];
-
-const ProductList = ({ Title, url }) => {
-  return (
+const ProductList = ({ Title, produtos }) => {
+  return produtos ? (
     <Wrapper className="Container">
       <h1>{Title}</h1>
       <Lista>
-        {Images.map((image, index) => {
+        {produtos.map((produto) => {
           return (
-            <a href={'/produto/' + index} key={index}>
+            <a href={'/produto/' + produto.id} key={produto.id}>
               <Card>
                 <div className="image">
-                  <img src={image.url} alt={image.alt} />
+                  <img
+                    src={'http://localhost:1337' + produto.images[0].url}
+                    alt={produto.name}
+                  />
                 </div>
                 <div className="info">
                   <p>Descrição do que é isso aqui</p>
@@ -32,11 +26,8 @@ const ProductList = ({ Title, url }) => {
           );
         })}
       </Lista>
-      <a href={'/' + url}>
-        <Button>Ver Mais</Button>
-      </a>
     </Wrapper>
-  );
+  ) : null;
 };
 
 export default ProductList;

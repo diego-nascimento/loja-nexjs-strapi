@@ -1,6 +1,6 @@
 import React from 'react';
 import MenuItem from '../Menu/Menu';
-
+import Link from 'next/link';
 import {
   Header as Head,
   Marca,
@@ -14,11 +14,13 @@ const Header = ({ dataHeader }) => {
 
   return (
     <Head className="Container">
-      <a href="/">
-        <Marca>
-          <span>S</span>troncio
-        </Marca>
-      </a>
+      <Link href="/">
+        <a>
+          <Marca>
+            <span>S</span>troncio
+          </Marca>
+        </a>
+      </Link>
 
       {MenuState === false ? (
         <BotaoHambClosed onClick={() => setMenuState(!MenuState)}>

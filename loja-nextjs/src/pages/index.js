@@ -3,12 +3,16 @@ import Painel from '../Components/Painel/Painel';
 import Banner from '../Components/Banner/Banner';
 import ProductList from '../Components/Products-List/Product-List';
 import { getCategorias } from '../Util/getCategorias';
+import { getNovidades } from '../Util/getNovidades';
 
-export default function Home({ data }) {
+export default function Home({ data, novidades }) {
   return (
     <Layout dataHeader={data}>
       <Painel />
-      <ProductList Title="Novidades" url={null} what="Novidades" />
+      {novidades && novidades.length > 0 ? (
+        <ProductList Title="Novidades" url={null} produtos={novidades} />
+      ) : null}
+
       <Banner urlImage={null} link={null} />
       <ProductList Title="Ofertas" url={null} what="Ofertas" />
       <ProductList Title="Mais Vendidos" url={null} what="MaisVendidos" />
@@ -19,7 +23,11 @@ export default function Home({ data }) {
 export async function getStaticProps(context) {
   const response = await getCategorias();
   const data = response.data;
+
+  const novidades = await getNovidades();
+
   return {
-    props: { data },
+    props: { data, novidades: novidades.data },
+    revalidate: 5,
   };
 }

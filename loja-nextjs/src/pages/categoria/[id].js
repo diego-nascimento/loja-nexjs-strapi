@@ -2,23 +2,14 @@ import React from 'react';
 import Layout from '../../Components/layout/Layout';
 import { getCategorias } from '../../Util/getCategorias';
 import { getProdutosCategoria } from '../../Util/getProdutosCategoria';
+import ProductList from '../../Components/Products-List/Product-List';
 
 const Categoria = ({ dataHeader, produtos }) => {
   return (
     <Layout dataHeader={dataHeader}>
-      {produtos &&
-        produtos.map((produto) => {
-          return (
-            <div key={produto.id}>
-              <img
-                src={'http://localhost:1337' + produto.images[0].url}
-                alt={produto.name}
-              />
-              <h1>{produto.name}</h1>
-              <p>{produto.description}</p>
-            </div>
-          );
-        })}
+      {produtos && produtos.length > 0 ? (
+        <ProductList Title={produtos[0].categoria.name} produtos={produtos} />
+      ) : null}
     </Layout>
   );
 };
