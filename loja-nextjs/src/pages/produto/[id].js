@@ -25,9 +25,7 @@ const Produto = ({ data, produto, novidades }) => {
           </span>
           <span>
             /
-            <Link
-              href={'http://localhost:3000/categoria/' + produto.categoria.id}
-            >
+            <Link href={'/categoria/' + produto.categoria.id}>
               <a> {produto.categoria.name}</a>
             </Link>
           </span>

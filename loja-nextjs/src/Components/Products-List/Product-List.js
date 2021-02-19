@@ -9,10 +9,7 @@ const ProductList = ({ Title, produtos }) => {
       <Lista>
         {produtos.map((produto) => {
           return (
-            <a
-              href={'http://localhost:3000/produto/' + produto.id}
-              key={produto.id}
-            >
+            <a href={'/produto/' + produto.id} key={produto.id}>
               <CardProduto produto={produto} />
             </a>
           );
