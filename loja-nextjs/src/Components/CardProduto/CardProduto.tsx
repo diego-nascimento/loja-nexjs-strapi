@@ -27,6 +27,7 @@ const CardProduto: React.FC<CardProdutoProps> = ({ produto }) => {
                       src={'http://localhost:1337' + image.url}
                       alt={produto.name}
                     />
+                    <strong>{produto.name}</strong>
                   </Carousel.Item>
                 );
               })

@@ -8,7 +8,7 @@ export const getProdutos = async ():Promise<[IProduto]>  => {
 };
 
 
-export const getProduto = async (id: string): Promise<[IProduto]> => {
+export const getProduto = async (id: string): Promise<IProduto> => {
   const response = await axios.get('http://localhost:1337/produtos?id=' + id);
   return response.data[0]
 };

@@ -19,7 +19,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ Nome, Options, link }) => {
         onMouseLeave={() => setMenuState(false)}
       >
         {link && (
-          <Link href={'http://localhost:3000/' + link}>
+          <Link href={'/' + link}>
             <span>{Nome}</span>
           </Link>
         )}

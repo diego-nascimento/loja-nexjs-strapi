@@ -36,9 +36,12 @@
     },
     "resume": {
       "type": "string"
+<<<<<<< HEAD
     },
     "marca": {
       "model": "marca"
+=======
+>>>>>>> 0369efeeba3292dc0700abf8eb89aa0fb88f170e
     }
   }
 }
