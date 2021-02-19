@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "produtos",
+  "collectionName": "marcas",
   "info": {
-    "name": "Produtos",
-    "description": ""
+    "name": "marca"
   },
   "options": {
     "increments": true,
@@ -14,13 +13,7 @@
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
-    },
-    "categoria": {
-      "model": "categorias"
-    },
-    "images": {
+    "image": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -30,15 +23,6 @@
       ],
       "plugin": "upload",
       "required": false
-    },
-    "novidade": {
-      "type": "boolean"
-    },
-    "resume": {
-      "type": "string"
-    },
-    "marca": {
-      "model": "marca"
     }
   }
 }
